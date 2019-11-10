@@ -1,0 +1,11 @@
+.bg {
+    -fx-background-color: linear-gradient(to right top, #8fee88, #7addee);
+}
+
+.btn {
+    -fx-background-color: none;
+}
+
+.btn:hover {
+    -fx-background-color: #70faff;
+}

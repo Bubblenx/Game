@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1200.0" styleClass="bg" stylesheets="@css/all.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.controller.WorldController">
+   <children>
+      <Label layoutX="480.0" layoutY="58.0" text="咸鱼大冒险">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+      </Label>
+      <Label fx:id="communication" alignment="TOP_LEFT" layoutX="275.0" layoutY="191.0" prefHeight="200.0" prefWidth="700.0" style="-fx-border-color: lightgray;" stylesheets="@css/all.css">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="people" layoutX="168.0" layoutY="191.0" text="旁 白: " AnchorPane.rightAnchor="960.0">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER" layoutX="300.0" layoutY="425.0" prefWidth="650.0" spacing="150.0" styleClass="hh" stylesheets="@css/all.css">
+         <children>
+            <Button mnemonicParsing="false" onAction="#communication" prefWidth="120.0" text="对话">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="btn" />
+                  <String fx:value="button" />
+               </styleClass>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#battle" prefWidth="120.0" text="战斗">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="btn" />
+                  <String fx:value="button" />
+               </styleClass>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#goOut" prefWidth="120.0" text="跑路">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="btn" />
+                  <String fx:value="button" />
+               </styleClass>
+            </Button>
+         </children>
+      </HBox>
+      <Pane fx:id="pane" layoutX="150.0" layoutY="560.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <ImageView fx:id="woman" disable="true" fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/女.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="man" disable="true" fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/男.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <GridPane layoutX="350.0" layoutY="575.0" maxWidth="700.0" prefHeight="171.0" prefWidth="620.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label alignment="CENTER_RIGHT" prefWidth="80.0" text="咸鱼:" GridPane.halignment="CENTER">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" prefWidth="80.0" text="性别:" GridPane.columnIndex="4" GridPane.halignment="CENTER">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" prefWidth="80.0" text="力量:" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" prefWidth="80.0" text="职业:" GridPane.columnIndex="2" GridPane.halignment="CENTER">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" prefWidth="80.0" text="敏捷:" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" prefWidth="80.0" text="智力:" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="name" alignment="CENTER" prefWidth="60.0" style="-fx-background-color: lightgray;" text="咸鱼" GridPane.columnIndex="1" />
+            <Label fx:id="work" alignment="CENTER" prefWidth="60.0" style="-fx-background-color: lightgray;" text="平民" GridPane.columnIndex="3" />
+            <Label fx:id="sex" alignment="CENTER" prefWidth="60.0" style="-fx-background-color: lightgray;" text="男" GridPane.columnIndex="5" />
+            <Label fx:id="power" alignment="CENTER" prefWidth="60.0" style="-fx-background-color: lightgray;" text="0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label fx:id="speed" alignment="CENTER" prefWidth="60.0" style="-fx-background-color: lightgray;" text="0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Label fx:id="wisdom" alignment="CENTER" prefWidth="60.0" style="-fx-background-color: lightgray;" text="0" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+      <Pane layoutX="989.0" layoutY="546.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white;">
+         <children>
+            <Pane fx:id="life" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: lightgreen;" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
